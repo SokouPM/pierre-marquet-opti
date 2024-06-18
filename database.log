@@ -59,3 +59,6 @@
 1718721396616|1|statement|insert into adresse (code_postal,complement_adresse,ville) values (0,'stqssdsqring','stqsdqring')
 1718721396620|2|statement|insert into ecole (adresse_id,domaine_ecole,nom_ecole) values (4,'ddzqsqs','qsdq')
 1718721396622|0|rollback|
+1718721500702|1|statement|insert into adresse (code_postal,complement_adresse,ville) values (0,'stqssdsqring','stqsdqring')
+1718721500705|1|statement|insert into ecole (adresse_id,domaine_ecole,nom_ecole) values (5,'ddzqsqs','qsdq')
+1718721500706|0|rollback|
