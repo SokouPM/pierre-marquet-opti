@@ -4,6 +4,7 @@ import com.exo2.Exercice2.dto.EtudiantDto;
 import com.exo2.Exercice2.dto.ProjetDto;
 import com.exo2.Exercice2.service.ProjetService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,8 +17,10 @@ public class ProjetController {
     private ProjetService projetService;
 
     @GetMapping
-    public ResponseEntity<List<ProjetDto>> findAll() {
-        return ResponseEntity.ok(projetService.findAll());
+    public ResponseEntity<List<ProjetDto>> findAll(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size) {
+
+        Pageable pageable = Pageable.ofSize(size).withPage(page);
+        return ResponseEntity.ok(projetService.findAll(pageable));
     }
 
     @GetMapping("/{id}")
@@ -31,7 +34,9 @@ public class ProjetController {
     }
 
     @GetMapping("/{id}/etudiants")
-    public ResponseEntity<List<EtudiantDto>> findEtudiantsByProjetId(@PathVariable Long id) {
-        return ResponseEntity.ok(projetService.findEtudiantsByProjetId(id));
+    public ResponseEntity<List<EtudiantDto>> findEtudiantsByProjetId(@PathVariable Long id, @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size) {
+
+        Pageable pageable = Pageable.ofSize(size).withPage(page);
+        return ResponseEntity.ok(projetService.findEtudiantsByProjetId(id, pageable));
     }
 }

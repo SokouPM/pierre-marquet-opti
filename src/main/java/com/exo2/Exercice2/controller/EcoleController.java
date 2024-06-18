@@ -3,6 +3,7 @@ package com.exo2.Exercice2.controller;
 import com.exo2.Exercice2.dto.EcoleDto;
 import com.exo2.Exercice2.service.EcoleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,8 +16,10 @@ public class EcoleController {
     private EcoleService ecoleService;
 
     @GetMapping
-    public ResponseEntity<List<EcoleDto>> findAll() {
-        return ResponseEntity.ok(ecoleService.findAll());
+    public ResponseEntity<List<EcoleDto>> findAll(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size) {
+
+        Pageable pageable = Pageable.ofSize(size).withPage(page);
+        return ResponseEntity.ok(ecoleService.findAll(pageable));
     }
 
     @GetMapping("/{id}")
@@ -25,8 +28,10 @@ public class EcoleController {
     }
 
     @GetMapping("/findBy")
-    public ResponseEntity<List<EcoleDto>> findByNomContainingIgnoreCase(@RequestParam String nom) {
-        return ResponseEntity.ok(ecoleService.findByNomEtudiant(nom));
+    public ResponseEntity<List<EcoleDto>> findByNomContainingIgnoreCase(@RequestParam String nom, @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size) {
+
+        Pageable pageable = Pageable.ofSize(size).withPage(page);
+        return ResponseEntity.ok(ecoleService.findByNomEtudiant(nom, pageable));
     }
 
     @PostMapping

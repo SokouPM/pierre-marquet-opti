@@ -6,6 +6,7 @@ import com.exo2.Exercice2.mapper.EtudiantMapper;
 import com.exo2.Exercice2.mapper.ProjetMapper;
 import com.exo2.Exercice2.repository.ProjetRepository;
 import lombok.AllArgsConstructor;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,8 +18,8 @@ public class ProjetService {
     private ProjetMapper projetMapper;
     private EtudiantMapper etudiantMapper;
 
-    public List<ProjetDto> findAll() {
-        return  projetMapper.toDtos(projetRepository.findAll());
+    public List<ProjetDto> findAll(Pageable pageable) {
+        return projetMapper.toDtos(projetRepository.findAll(pageable));
     }
 
     public ProjetDto findById(Long id) {
@@ -29,9 +30,8 @@ public class ProjetService {
         return projetMapper.toDto(projetRepository.save(projetMapper.toEntity(projetDto)));
     }
 
-    public List<EtudiantDto> findEtudiantsByProjetId(Long id)
-    {
-        return etudiantMapper.toDtos(projetRepository.findEtudiantsByProjetId(id));
+    public List<EtudiantDto> findEtudiantsByProjetId(Long id, Pageable pageable) {
+        return etudiantMapper.toDtos(projetRepository.findEtudiantsByProjetId(id, pageable));
     }
 
 }

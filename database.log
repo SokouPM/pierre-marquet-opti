@@ -1,0 +1,40 @@
+1718716129091|4|statement|select * from information_schema.sequences
+1718716129121|0|statement|select * from "public"."adresse" where 1=0
+1718716129133|0|statement|select * from "public"."ecole" where 1=0
+1718716129139|0|statement|select * from "public"."etudiant" where 1=0
+1718716129141|0|statement|select * from "public"."projet" where 1=0
+1718716146900|2|statement|select * from information_schema.sequences
+1718716146925|0|statement|select * from "public"."adresse" where 1=0
+1718716146935|0|statement|select * from "public"."ecole" where 1=0
+1718716146941|0|statement|select * from "public"."etudiant" where 1=0
+1718716146943|0|statement|select * from "public"."projet" where 1=0
+1718716149906|4|statement|select * from information_schema.sequences
+1718716149938|0|statement|select * from "public"."adresse" where 1=0
+1718716149946|0|statement|select * from "public"."ecole" where 1=0
+1718716149953|0|statement|select * from "public"."etudiant" where 1=0
+1718716149955|0|statement|select * from "public"."projet" where 1=0
+1718716244650|3|statement|select * from information_schema.sequences
+1718716244679|0|statement|select * from "public"."adresse" where 1=0
+1718716244690|0|statement|select * from "public"."ecole" where 1=0
+1718716244696|0|statement|select * from "public"."etudiant" where 1=0
+1718716244698|0|statement|select * from "public"."projet" where 1=0
+1718718495051|4|statement|select * from information_schema.sequences
+1718718495083|0|statement|select * from "public"."adresse" where 1=0
+1718718495095|0|statement|select * from "public"."ecole" where 1=0
+1718718495105|0|statement|select * from "public"."etudiant" where 1=0
+1718718495107|0|statement|select * from "public"."projet" where 1=0
+1718718833455|5|statement|select * from information_schema.sequences
+1718718833485|0|statement|select * from "public"."adresse" where 1=0
+1718718833497|0|statement|select * from "public"."ecole" where 1=0
+1718718833504|0|statement|select * from "public"."etudiant" where 1=0
+1718718833506|0|statement|select * from "public"."projet" where 1=0
+1718719457681|4|statement|select * from information_schema.sequences
+1718719457713|0|statement|select * from "public"."adresse" where 1=0
+1718719457725|0|statement|select * from "public"."ecole" where 1=0
+1718719457733|0|statement|select * from "public"."etudiant" where 1=0
+1718719457735|0|statement|select * from "public"."projet" where 1=0
+1718719899620|4|statement|select * from information_schema.sequences
+1718719899652|0|statement|select * from "public"."adresse" where 1=0
+1718719899663|0|statement|select * from "public"."ecole" where 1=0
+1718719899670|0|statement|select * from "public"."etudiant" where 1=0
+1718719899672|0|statement|select * from "public"."projet" where 1=0
