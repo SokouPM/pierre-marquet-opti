@@ -17,7 +17,7 @@ public class EcoleService {
     private EcoleMapper ecoleMapper;
 
     public List<EcoleDto> findAll(Pageable pageable) {
-        return ecoleMapper.toDtos(ecoleRepository.findAll(pageable));
+        return ecoleMapper.toDtos(ecoleRepository.findAll(pageable).getContent());
     }
 
     public EcoleDto findById(long id) {

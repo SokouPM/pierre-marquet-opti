@@ -3,7 +3,6 @@ package com.exo2.Exercice2.mapper;
 import com.exo2.Exercice2.dto.EcoleDto;
 import com.exo2.Exercice2.entity.Ecole;
 import org.mapstruct.Mapper;
-import org.springframework.data.domain.Page;
 
 import java.util.List;
 
@@ -15,7 +14,7 @@ public interface EcoleMapper {
     EcoleDto toDto(Ecole ecole);
 
     // List of objects
-    List<Ecole> toEntities(Page<EcoleDto> ecoleDtos);
+    List<Ecole> toEntities(List<EcoleDto> ecoleDtos);
 
-    List<EcoleDto> toDtos(Page<Ecole> ecoles);
+    List<EcoleDto> toDtos(List<Ecole> ecoles);
 }

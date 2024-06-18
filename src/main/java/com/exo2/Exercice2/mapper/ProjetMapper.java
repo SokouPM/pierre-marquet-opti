@@ -4,7 +4,6 @@ import com.exo2.Exercice2.dto.ProjetDto;
 import com.exo2.Exercice2.entity.Projet;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
-import org.springframework.data.domain.Page;
 
 import java.util.List;
 
@@ -15,7 +14,7 @@ public interface ProjetMapper {
 
     Projet toEntity(ProjetDto projetDto);
 
-    List<ProjetDto> toDtos(Page<Projet> projets);
+    List<ProjetDto> toDtos(List<Projet> projets);
 
-    List<Projet> toEntities(Page<ProjetDto> projetDtos);
+    List<Projet> toEntities(List<ProjetDto> projetDtos);
 }

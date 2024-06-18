@@ -16,7 +16,7 @@ public class AdresseService {
     private AdresseMapper adresseMapper;
 
     public List<AdresseDto> findAll(Pageable pageable) {
-        return adresseMapper.toDtos(adresseRepository.findAll(pageable));
+        return adresseMapper.toDtos(adresseRepository.findAll(pageable).getContent());
     }
 
     public AdresseDto findById(Long id) {

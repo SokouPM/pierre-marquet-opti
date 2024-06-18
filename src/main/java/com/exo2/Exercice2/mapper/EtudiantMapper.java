@@ -5,7 +5,6 @@ import com.exo2.Exercice2.entity.Etudiant;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.ReportingPolicy;
-import org.springframework.data.domain.Page;
 
 import java.util.List;
 
@@ -18,8 +17,8 @@ public interface EtudiantMapper {
     EtudiantDto toDto(Etudiant etudiant);
 
     // List of Objects
-    List<Etudiant> toEntities(Page<EtudiantDto> etudiantsDto);
+    List<Etudiant> toEntities(List<EtudiantDto> etudiantsDto);
 
-    List<EtudiantDto> toDtos(Page<Etudiant> etudiants);
+    List<EtudiantDto> toDtos(List<Etudiant> etudiants);
 
 }

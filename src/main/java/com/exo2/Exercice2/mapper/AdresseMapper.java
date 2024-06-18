@@ -3,7 +3,6 @@ package com.exo2.Exercice2.mapper;
 import com.exo2.Exercice2.dto.AdresseDto;
 import com.exo2.Exercice2.entity.Adresse;
 import org.mapstruct.Mapper;
-import org.springframework.data.domain.Page;
 
 import java.util.List;
 
@@ -13,7 +12,7 @@ public interface AdresseMapper {
 
     Adresse toEntity(AdresseDto adresseDto);
 
-    List<AdresseDto> toDtos(Page<Adresse> adresses);
+    List<AdresseDto> toDtos(List<Adresse> adresses);
 
-    List<Adresse> toEntities(Page<AdresseDto> adressesDto);
+    List<Adresse> toEntities(List<AdresseDto> adressesDto);
 }

@@ -38,3 +38,24 @@
 1718719899663|0|statement|select * from "public"."ecole" where 1=0
 1718719899670|0|statement|select * from "public"."etudiant" where 1=0
 1718719899672|0|statement|select * from "public"."projet" where 1=0
+1718721234826|5|statement|select * from information_schema.sequences
+1718721234858|0|statement|select * from "public"."adresse" where 1=0
+1718721234868|0|statement|select * from "public"."ecole" where 1=0
+1718721234876|0|statement|select * from "public"."etudiant" where 1=0
+1718721234879|0|statement|select * from "public"."projet" where 1=0
+1718721244962|2|statement|insert into adresse (code_postal,complement_adresse,ville) values (0,'string','string')
+1718721244969|3|statement|insert into ecole (adresse_id,domaine_ecole,nom_ecole) values (1,'string','string')
+1718721244972|0|rollback|
+1718721285594|1|statement|insert into adresse (code_postal,complement_adresse,ville) values (0,'string','string')
+1718721285596|0|statement|insert into ecole (adresse_id,domaine_ecole,nom_ecole) values (2,'string','string')
+1718721285598|0|rollback|
+1718721306221|2|statement|select e1_0.ecole_id,a1_0.adresse_id,a1_0.code_postal,a1_0.complement_adresse,a1_0.ville,e1_0.domaine_ecole,e1_0.nom_ecole,e2_0.ecole_id,e2_0.etudiant_id,e2_0.nom,e2_0.prenom from ecole e1_0 left join adresse a1_0 on a1_0.adresse_id=e1_0.adresse_id left join etudiant e2_0 on e1_0.ecole_id=e2_0.ecole_id where e1_0.ecole_id=0
+1718721306223|0|statement|select a1_0.adresse_id,a1_0.code_postal,a1_0.complement_adresse,e1_0.ecole_id,e1_0.domaine_ecole,e1_0.nom_ecole,e2_0.ecole_id,e2_0.etudiant_id,e2_0.nom,e2_0.prenom,a1_0.ville from adresse a1_0 left join ecole e1_0 on a1_0.adresse_id=e1_0.adresse_id left join etudiant e2_0 on e1_0.ecole_id=e2_0.ecole_id where a1_0.adresse_id=0
+1718721306224|0|statement|insert into adresse (code_postal,complement_adresse,ville) values (0,'string','string')
+1718721306226|0|statement|insert into ecole (adresse_id,domaine_ecole,nom_ecole) values (3,'string','string')
+1718721306227|0|rollback|
+1718721396611|1|statement|select e1_0.ecole_id,a1_0.adresse_id,a1_0.code_postal,a1_0.complement_adresse,a1_0.ville,e1_0.domaine_ecole,e1_0.nom_ecole,e2_0.ecole_id,e2_0.etudiant_id,e2_0.nom,e2_0.prenom from ecole e1_0 left join adresse a1_0 on a1_0.adresse_id=e1_0.adresse_id left join etudiant e2_0 on e1_0.ecole_id=e2_0.ecole_id where e1_0.ecole_id=0
+1718721396614|1|statement|select a1_0.adresse_id,a1_0.code_postal,a1_0.complement_adresse,e1_0.ecole_id,e1_0.domaine_ecole,e1_0.nom_ecole,e2_0.ecole_id,e2_0.etudiant_id,e2_0.nom,e2_0.prenom,a1_0.ville from adresse a1_0 left join ecole e1_0 on a1_0.adresse_id=e1_0.adresse_id left join etudiant e2_0 on e1_0.ecole_id=e2_0.ecole_id where a1_0.adresse_id=0
+1718721396616|1|statement|insert into adresse (code_postal,complement_adresse,ville) values (0,'stqssdsqring','stqsdqring')
+1718721396620|2|statement|insert into ecole (adresse_id,domaine_ecole,nom_ecole) values (4,'ddzqsqs','qsdq')
+1718721396622|0|rollback|

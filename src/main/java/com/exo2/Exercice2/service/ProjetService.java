@@ -19,7 +19,7 @@ public class ProjetService {
     private EtudiantMapper etudiantMapper;
 
     public List<ProjetDto> findAll(Pageable pageable) {
-        return projetMapper.toDtos(projetRepository.findAll(pageable));
+        return projetMapper.toDtos(projetRepository.findAll(pageable).getContent());
     }
 
     public ProjetDto findById(Long id) {
